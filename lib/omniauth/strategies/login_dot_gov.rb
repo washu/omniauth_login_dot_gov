@@ -50,7 +50,7 @@ module OmniAuth
           ial: options.ial,
           idp_base_url: options.idp_base_url,
           private_key: options.private_key,
-          redirect_uri: options.redirect_uri,
+          redirect_uri: options.redirect_uri || (full_host + script_name + callback_path),
           scope: options.scope
         )
       end
